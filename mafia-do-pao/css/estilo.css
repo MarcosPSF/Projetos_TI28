@@ -1,0 +1,24 @@
+body{
+    background-color: #730202;
+}
+.container-global{
+    display: flex;
+    justify-content: center;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column wrap;
+    height: 300px;
+    width: 400px;
+    color: aliceblue;
+    background-color: #000000;
+    border-radius: 30px;
+    
+}
+.formulario input{
+    border-radius: 30px;
+    height: 35px;
+    background-color: whitesmoke;
+}
