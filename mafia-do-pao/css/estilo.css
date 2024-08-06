@@ -1,24 +1,154 @@
 body{
-    background-color: #730202;
+    background-color: #1c3156;
 }
+
+/* CONTAINER GLOBAL */
 .container-global{
     display: flex;
     justify-content: center;
+    background-color: #1c3156;
+
 }
+
 .formulario{
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-flow: column wrap;
+    flex-flow: column;
+    padding: 30px 3% 30px 30px;
+    width: 300px;
     height: 300px;
-    width: 400px;
+    background-color: #730202;
+    border-radius: 20px;
     color: aliceblue;
-    background-color: #000000;
-    border-radius: 30px;
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.formulario img{
+    display: flex;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.formulario input{
+    display: flex;
+    justify-content: center;
+    height: 22px;
+    border-radius: 20px;
+    border: aliceblue 1px solid;
+
+}
+
+/* CSS DO HOME */
+.topo{
+    display: flex;
+    justify-content: space-between;
+    background-color: #3670a8;
+    height: 50px;
+    width: auto;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+.topo label{
+    margin-top: 8px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+/* SAIR */
+.topo a{
+    width: 40px;
+    height: 40px;
+}
+
+/* ESTILIZAÇÃO DOS BOTÕES */
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-content:center;
+    flex-flow: row wrap;
+    margin-top: 30px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.menu a{
+    background-color: #0092ba;
+    width: 300px;
+    height: 300px;
+    margin: 30px 30px 30px 30px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: transform .2s;
+}
+
+.menu a:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+
+
+
+.menu img{
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+  
+  .menu .tooltiptext {
+    margin-top: 260px ;
+    width: 200px;
+    background-color: #fff;
+    color: #020202;
+    font-size: medium;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+
+/* AJUSTANDO TABELAS */
+.container-listausuarios {
+    margin-top: 60px;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    align-items: center;
+
+}
+
+.lista{
+    background-color: #0092ba;
+    padding: 20px;
+    border-radius: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
     
 }
-.formulario input{
-    border-radius: 30px;
-    height: 35px;
-    background-color: whitesmoke;
+td, tr, th{
+    color: #ffffff;
+    border: #fff 2px solid;
+    font-size: 25px;
 }
+
+.btnsair{
+    transition: transform .2s;
+}
+.btnsair a:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
