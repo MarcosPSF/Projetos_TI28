@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
 
     <form class="formulario" action="login.php" method="post">
-        <img src="img/logo.jfif" width="50" height="50">
+        <img src="img/logo.jfif" width="200" height="200">
                 <label>LOGIN</label>
                 <input type="text" name="txtlogin" placeholder="Digite seu login" required>
                 <br>
