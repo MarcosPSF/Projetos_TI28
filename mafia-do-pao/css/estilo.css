@@ -39,6 +39,13 @@ body{
     border: aliceblue 1px solid;
 
 }
+.bullets{
+    display: flex;
+    flex-flow: row;
+    justify-items: center;
+    width: auto;
+    height: 100px;
+}
 
 /* CSS DO HOME */
 .topo{
@@ -130,18 +137,23 @@ body{
 }
 
 .lista{
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    
     background-color: #3670a8;
     padding: 20px;
     border-radius: 10px;
     border-collapse: collapse;
-    width: 100%;
+    width: auto;
     height: auto;
-    
+        
 }
 td, tr, th{
     color: #ffffff;
     border: #fff 2px solid;
     font-size: 25px;
+    
 }
 
 .btnsair{

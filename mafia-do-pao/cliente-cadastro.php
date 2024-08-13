@@ -1,5 +1,6 @@
 <?php
 include("conectadb.php");
+include('topo.php');
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $cpf = $_POST['txtcpf'];
@@ -38,15 +39,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <title>Cadastro cliente</title>
 </head>
 <body>
-<a href="backoffice.php"><img src="icons/Navigation-left-01-256.png" width="25" height="25"></a>
+<br>
 <div class="container-global">
 
+
     <form class="formulario" action="cliente-cadastro.php" method="post">
+    <img src="img/logo.jfif" width="100" height="100">
         <label>CPF</label>
         <input type="text" id="cpf" name="txtcpf" placeholder="000.000.000-00" maxlength="14" oninput="formatarCPF(this)">
         <br>
         <label>DIGITE SEU NOME</label>
-        <input type="text" name="txtnome" placeholder="Digote seu Nome" required>
+        <input type="text" name="txtnome" placeholder="Digite seu Nome" required>
         <br>
         <label>EMAIL</label>
         <input type="email" name="txtemail" placeholder="Digite seu email" required>

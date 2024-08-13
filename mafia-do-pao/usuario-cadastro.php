@@ -1,5 +1,6 @@
 <?php
 include("conectadb.php");
+include('topo.php');
 // include("header.php");
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -40,11 +41,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <title>CADASTRO DE USUARIO</title>
 </head>
 <body>
-<a href="backoffice.php"><img src="icons/Navigation-left-01-256.png" width="25" height="25"></a>
+<br>
 
     <div class="container-global">
         
         <form class="formulario" action="usuario-cadastro.php" method="post">
+        <img src="img/logo.jfif" width="200" height="200">
 
             <label>LOGIN</label>
             <input type="text" name="txtlogin" placeholder="Digite seu login" required>
