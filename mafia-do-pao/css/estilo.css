@@ -127,33 +127,29 @@ body{
 
 
 /* AJUSTANDO TABELAS */
-.container-listausuarios {
-    margin-top: 60px;
+.container-listausuarios, .container-listaclientes{
     display: flex;
     flex-flow: column;
     align-content: center;
     align-items: center;
-
+    
 }
 
 .lista{
     display: flex;
     justify-content: center;
     flex-flow: row;
-    
     background-color: #3670a8;
     padding: 20px;
     border-radius: 10px;
     border-collapse: collapse;
     width: auto;
-    height: auto;
-        
+    height: auto; 
 }
 td, tr, th{
     color: #ffffff;
     border: #fff 2px solid;
     font-size: 25px;
-    
 }
 
 .btnsair{
@@ -163,4 +159,13 @@ td, tr, th{
     -ms-transform: scale(1.1); /* IE 9 */
     -webkit-transform: scale(1.1); /* Safari 3-8 */
     transform: scale(1.1); 
+  }
+  .container-listaclientes form{
+    margin-top: 5px;
+    justify-content: center;
+    flex-flow: row;
+    background-color: white;
+    width: auto;
+    border-radius: 20px;
+    padding: 10px;
   }
