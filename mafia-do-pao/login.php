@@ -3,9 +3,16 @@ session_start();
 
 include("conectadb.php");
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if($_SERVER['REQUEST_METHOD']== 'POST'){
     $login = $_POST['txtlogin'];
     $senha = $_POST['txtsenha'];
+
+    //VERIFICAÇÃO DO MD5(TEMPERO)
+    $sqltempero = "SELECT tempero FROM tb_usuarios
+    WHERE usu_login = '$login' AND usu_status = '1'";
+    $retornotempero = mysqli_query($link, $sqltempero);
+    $tempero = mysqli_fetch_array($retornotempero)[0];
+    $senha = md5($tempero . $senha); //criptogra a senha;
 
     // COMEÇA VALIDAR BANCO DE DADOS
     $sql = "SELECT COUNT(usu_id) FROM tb_usuarios
@@ -50,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
 
     <form class="formulario" action="login.php" method="post">
-        <img src="img/logo.jfif" width="200" height="200">
+        <img src="img/logo.jfif" width="50" height="50">
                 <label>LOGIN</label>
                 <input type="text" name="txtlogin" placeholder="Digite seu login" required>
                 <br>
@@ -59,6 +66,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <br>
                 <br>
                 <input type="submit" value="ACESSAR">
+                <br>
+                <a href="recuperasenha.php"> ESQUECI MINHA SENHA </a>
         </form>
 
     </div>

@@ -7,6 +7,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $login = $_POST['txtlogin'];
     $senha = $_POST['txtsenha'];
     $email = $_POST['txtemail'];
+    $tempero =md5($login . rand ());//cria um valor random para a criptografia
+    $senha =md5($tempero . $senha);//criptografia a senha
+
 
     // VALIDA SE USUARIO A CADASTRAR EXISTE
     $sql = "SELECT COUNT(usu_id) FROM tb_usuarios
@@ -17,8 +20,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     // VERIFICA SE NATAN EXISTE
     if($contagem == 0){
-        $sql = "INSERT INTO tb_usuarios(usu_login, usu_senha, usu_email, usu_status)
-        VALUES ('$login', '$senha', '$email', '1')";
+        $sql = "INSERT INTO tb_usuarios(usu_login, usu_senha, usu_email, usu_status, tempero)
+        VALUES ('$login', '$senha', '$email', '1', '$tempero')";
         mysqli_query($link, $sql);
         echo"<script>window.alert('USUARIO CADASTRADO COM SUCESSO');</script>";
         echo"<script>window.location.href='login.php';</script>";
