@@ -34,5 +34,7 @@ CREATE TABLE tb_reservas (
     fk_cli_id INT NOT NULL,
     iv_status CHAR(1) NOT NULL DEFAULT '1',  -- 1: Ativo, 0: Inativo
     FOREIGN KEY (fk_qd_id) REFERENCES tb_quadras(qd_id) ON DELETE CASCADE,
-    FOREIGN KEY (fk_cli_id) REFERENCES tb_clientes(cli_id) ON DELETE CASCADE
+    FOREIGN KEY (fk_cli_id) REFERENCES tb_clientes(cli_id) ON DELETE CASCADE;
+    horainicio TIME;
+    horafim TIME
 );
