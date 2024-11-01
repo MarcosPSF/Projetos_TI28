@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
         <form class="formulario" action="cliente-cadastro.php" method="post">
-            <img src="img/logo.jfif" width="100" height="100">
+            
             <label>CPF</label>
             <input type="text" id="cpf" name="txtcpf" placeholder="000.000.000-00" maxlength="14"
                 oninput="formatarCPF(this)">

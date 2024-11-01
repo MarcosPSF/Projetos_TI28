@@ -2,7 +2,7 @@
 
 include('conecta.php');
 
- //inicia se n existe
+
 
 
 
@@ -59,18 +59,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
-
-
-
-
-
 //echo $data;
 
 //DEFINE HORARIO PARA O MESMO DE SP
 date_default_timezone_set('America/Sao_Paulo');
 
 // Define a data desejada
-$data_reserva = '2024-10-29';
+$data_reserva = $data;
 echo $idquadra;
 
 // Consulta SQL para buscar horários reservados
@@ -131,6 +126,7 @@ function horarioEstaReservado($hora, $reservas)
         }
     }
     return false;
+    
 }
 
 

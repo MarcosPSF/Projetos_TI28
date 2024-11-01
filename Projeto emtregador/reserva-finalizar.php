@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $resultadocliente = mysqli_query($link, $sqlcliente);
     $idcliente = mysqli_fetch_array($resultadocliente)[0];
 
-    // Verificar se existem reservas com status '1' (abertas)
+    // Verificar se existem reservas com abertas
     $sqlreservasativas = "SELECT COUNT(iv_id) FROM tb_reservas WHERE iv_status = 1";
     $retorno = mysqli_query($link, $sqlreservasativas);
     $reservasativas = mysqli_fetch_array($retorno)[0];
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>alert('Nenhuma reserva ativa encontrada.');</script>";
         echo "<script>window.location.href='fazer-reserva.php';</script>";
     } else {
-        // Finalizar todas as reservas com status '1'
+        // Finalizar todas as reservas abertas
         $sqlfinalizar = "UPDATE tb_reservas SET iv_status = 0, horainicio = '$horainicio', horafim ='$horafim' WHERE iv_status = 1";
         echo  $sqlfinalizar;
         if (mysqli_query($link, $sqlfinalizar)) {
